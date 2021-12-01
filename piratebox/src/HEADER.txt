@@ -1,0 +1,28 @@
+<head>
+	<title>PirateBox - Share Freely!</title>
+	<script src="/content/js/jquery.min.js"></script>
+	<script src="/content/js/scripts.js"></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+</head>
+<header id="header">
+	<div class="container">
+		<div id="logo">
+			<h1>
+				<a href="/">
+					<img src="/content/img/logo-horizontal-white.png" alt="PirateBox" title="PirateBox - Share Freely">
+				</a>
+			</h1>
+		</div>
+		<div id="menu-icon"><img src="/content/img/menu.png" alt="Menu"></div>
+		<nav id="top-nav">
+			<ul>
+				<li><a href="/" data-l10n-id="navbarHome">Pagina Principal</a></li>
+				<li><a href="/board/" class="current" data-l10n-id="navbarForum">Foro / Salas de chat</a></li>
+				<li><a href="/Shared/" data-l10n-id="navbarFiles">Archivos</a></li>
+				<li><a href="#about" data-l10n-id="navbarAbout">Acerca de</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div class="container">
+		<div class="card">

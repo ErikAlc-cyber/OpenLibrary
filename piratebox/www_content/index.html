@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/content/css/page_style.css">
+	<title>Open Information Library</title>
+	<script src="/content/js/jquery.min.js"></script>
+	<script src="/content/js/scripts.js"></script>
+        <link rel="stylesheet" href="/css/jquery-ui.min.css">
+        <script src="/content/js/jquery-ui.min.js"></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+
+	<link rel="prefetch" type="application/l10n" href="locales/locales.ini" />
+    <script type="text/javascript" src="/content/js/l10n.js"></script>
+
+</head>
+<body id="main-index">
+
+<header id="header">
+	<div class="container">
+	   <a href="/">
+		<div id="logo" scrolling="no">&nbsp;</div>
+	   </a>
+		<div id="menu-icon"></div>
+		<nav id="top-nav">
+			<ul>
+				<li><a href="/" class="current" data-l10n-id="navbarHome">Pagina Principal</a></li>
+				<li><a href="/board/" data-l10n-id="navbarForum">Foro / Salas de chat</a></li>
+				<li><a href="/Shared/" data-l10n-id="navbarFiles">Archivos</a></li>
+				<li><a href="FAQ.html">FAQ</a></li>
+				<li><a href="#about" data-l10n-id="navbarAbout">Acerca de</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<section id="content">
+	<div class="container">
+		<div id="welcome">
+
+		</div>
+		<div id="sidebar">
+			<div id="upload" class="card">
+				<h2 data-l10n-id="sidebarUpload">Biblioteca</h2>
+				<h3><a href="/Shared" data-l10n-id="sidebarBrowseFiles">Ver libros disponibles -></a></h3>
+			<div id="station"></div>
+			</div>
+			<div id="diskusagecard" class="card">
+			</div>
+
+		</div>
+
+		<div id="main">
+			<div id="chat" class="card">
+				<h2 data-l10n-id="mainChatChat">Anuncios</h2>
+				<div id="shoutbox" class="shoutbox_content"></div>
+				<form method="POST" name="psowrte" id="sb_form" onsubmit='getTime();'>
+					<div id="shoutbox-input">
+						<input class="nickname" type="text" 	name="name" 	value="Anonimo" placeholder="Nickname" data-l10n-id="mainChatName" >
+						<input class="message" 	type="text" 	name="data" 	placeholder="Mensaje..." data-l10n-id="mainChatMessage" >
+						<input class="button" 	type="submit" 	name="submit" 	value="Enviar"  id="send-button" data-l10n-id="mainChatSend" >
+					</div>
+					<div id="shoutbox-options">
+						<h3 data-l10n-id="mainChatTextColor">Color del texto:</h3>
+						<label for="def" 	class="bg-black"  data-l10n-id="mainShoutboxDefault">	<input name="color" type="radio" value="def" 	id="def"  checked>Negro</label>
+						<label for="blue" 	class="bg-blue"   data-l10n-id="mainShoutboxBlue">	<input name="color" type="radio" value="blue" 	id="blue">Azul</label>
+						<label for="green" 	class="bg-green"  data-l10n-id="mainShoutboxGreen">	<input name="color" type="radio" value="green" 	id="green">Verde</label>
+						<label for="orange" class="bg-orange" data-l10n-id="mainShoutboxOrange">	<input name="color" type="radio" value="orange" id="orange">Naranja</label>
+						<label for="red" 	class="bg-red"    data-l10n-id="mainShoutboxRed">		<input name="color" type="radio" value="red" 	id="red">Rojo</label>
+					</div>
+					<input type="hidden" name="timestamp" id="timestamp">
+					<script language='JavaScript'>
+						function getTime(){
+						var date = new Date();
+						var timestamp = Math.round(date.getTime() / 1000);
+						document.getElementById('timestamp').value = timestamp;
+						}
+					</script>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer id="about">
+	<div class="container">
+		<div id="details">
+			<p class="to-top"><a href="#header" data-l10n-id="footerBackToTop">Regresar arriba</a></p>
+			<h2 data-l10n-id="footerAbout">About PirateBox</h2>
+			<p data-l10n-id="footerInspired">Inspired by pirate radio and the free culture movement, PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content.</p>
+			<p data-l10n-id="footerFilesTopSafety">PirateBox is designed to be safe and secure. No logins are required and no user data is logged. The system is purposely not connected to the Internet in order to prevent tracking and preserve user privacy.</p>
+			<small data-l10n-id="footerLicenceMain">PirateBox is licensed under GPLv3.</small>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
